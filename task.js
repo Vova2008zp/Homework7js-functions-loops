@@ -24,7 +24,7 @@ const isAdult3 = function (num) {
     return null;
   }
   num >= 18 ? console.log(true) : console.log(false);
-}
+};
 
 //Task 2.1
 const checkMultiplicity = function (num1, num2) {
@@ -51,15 +51,15 @@ const checkMultiplicity3 = function (num1, num2) {
   if (isNaN(num1) || isNaN(num2)) {
     return null;
   }
-    num1 % num2 === 0 ? console.log(true) : console.log(false);
-  }
+  num1 % num2 === 0 ? console.log(true) : console.log(false);
+};
 
 //Task 3.1
 const lengthSideTriangle = function (a, b, c) {
   if (a + b > c && a + c > b && b + c > a) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 };
 
@@ -68,9 +68,9 @@ const lengthSideTriangle2 = function (a, b, c) {
   if (isNaN(a) || isNaN(b) || isNaN(c)) {
     return null;
   } else if (a + b > c && a + c > b && b + c > a) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 };
 
@@ -80,4 +80,26 @@ const lengthSideTriangle3 = function (a, b, c) {
     return null;
   }
   a + b > c && a + c > b && b + c > a ? console.log(true) : console.log(false);
+};
+
+//Task 4
+
+const getSumOddNumber = function (num) {
+  let result = 0;
+  debugger;
+  for (let i = 1; i < num; i++) {
+    result = num + i;
+    if(result % 2 === 0) continue;
+    else { result +=result};
+  }
+  // return result;
+};
+
+//Task 5
+function isPrimeNumber(num) {
+  // debugger
+  for (let i = 2; i < num; i++) {
+    if ( num % i === 0) return false;
+  }
+  return true;
 }
